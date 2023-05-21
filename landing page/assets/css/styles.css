@@ -217,7 +217,7 @@ header nav .logo{
 }
 .home{
   display: flex;
-  background: url(../img/bg.svg);
+  /*background: url(../img/bg.svg);*/
 }
 .home__container{
   height: calc(100vh - var(--header-height));
@@ -237,8 +237,8 @@ header nav .logo{
 }
 
 .home__img{
-  width: 300px;
-  justify-self: center;
+  width: 400px;
+  /*justify-self: center;*/
 }
 
 .button{
