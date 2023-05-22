@@ -39,7 +39,7 @@
     --font-medium: 500;
     --font-semi-bold: 600;
 
-    /*========== Margenes ==========*/
+    /*========== Margins==========*/
     --mb-1: .5rem;
     --mb-2: 1rem;
     --mb-3: 1.5rem;
@@ -58,48 +58,6 @@
 }
 html{
     scroll-behavior: smooth;
-}
-
-/*========== Variables Dark theme ==========*/
-body.dark-theme{
-    --title-color: #F1F3F2;
-    --text-color: #C7D1CC;
-    --body-color: #1D2521;
-    --container-color: #27302C;
-}
-
-/*========== Button Dark/Light ==========*/
-.change-theme {
-    position: absolute;
-    right: 1rem;
-    top: 1.8rem;
-    color: var(--text-color);
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-body{
-    margin: var(--header-height) 0 0 0;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
-h1,h2,h3,ul,p{
-    margin: 0;  
-}
-
-ul{
-    padding: 0;
-    list-style: none;
-}
-a{
-    text-decoration: none;
-}
-img{
-    max-width: 100%;
-    height: auto;
 }
 
 /*========== CLASS CSS ==========*/
@@ -290,7 +248,7 @@ img{
 }
 
 /*========== SERVICES ==========*/
-.services{
+.faqs{
     &__container{
         row-gap: 2.5rem;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -487,17 +445,13 @@ img{
         }
     }
     
-    .change-theme{
-        position: initial;
-        margin-left: var(--mb-2);
-    }
 
     .home__container{
         height: 100vh;
         justify-items: center;
     }
 
-    .services__container,
+    .faqs__container,
     .menu__container{
         margin-top: var(--mb-6);
     }

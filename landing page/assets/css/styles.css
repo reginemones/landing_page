@@ -175,7 +175,7 @@ header nav .logo{
   color: var(--primary-color);
 }
 .nav__toggle{
-  font-size: 1.3rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 .show-menu{
@@ -231,7 +231,7 @@ header nav .logo{
 }
 
 .home__subtitle{
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--green);
   margin-bottom: var(--mb-4);
 }
@@ -240,20 +240,6 @@ header nav .logo{
   width: 400px;
   /*justify-self: center;*/
 }
-
-/*.button{
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: .75rem 1rem;
-  border-radius: .5rem;
-  box-shadow: 3px 3px var(--drop-shadow);
-}
-
-.button:hover{
-  background-color: white;
-  color: var(--green);
-}*/
 
 .button {
   appearance: button;
@@ -338,32 +324,6 @@ header nav .logo{
   justify-self: center;
 }
 
-/*========== SERVICES ==========*/
-.services__container{
-  row-gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.services__content{
-  text-align: center;
-}
-
-.services__img{
-  width: 64px;
-  height: 64px;
-  fill: var(--first-color);
-  margin-bottom: var(--mb-2);
-}
-
-.services__title{
-  font-size: var(--h3-font-size);
-  color: var(--title-color);
-  margin-bottom: var(--mb-1);
-}
-
-.services__description{
-  padding: 0 1.5rem;
-}
 
 /*========== FEATURES ==========*/
 .features__container{
@@ -401,35 +361,132 @@ header nav .logo{
   margin-bottom: var(--mb-1);
 }
 
-/*========== APP ==========*/
-.app__data{
+/*========== FAQS ==========*/
+
+.faqs__content{
   text-align: center;
 }
-
-.app__description{
-  margin-bottom: var(--mb-5);
+/*
+.faqs-con{
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}*/
+.faqs__title{
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1);
 }
-.app__stores{
-  margin-bottom: var(--mb-4);
+/*.accordion-item{
+  background-color: #f7f7f7;
+  border-radius: .4rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+
+}
+.accordion-link{
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.accordion-link i{
+  color: #000000;
+  padding: .5rem;
 }
 
-.app__store{
-  width: 120px;
-  margin: 0 var(--mb-1);
+.accordion-link .bx-chevron-up{
+  display: none;
 }
 
-.app__img{
-  width: 230px;
-  justify-self: center;
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 650ms;
 }
 
-/*========== CONTACT ==========*/
-.contact__container{
-  text-align: center;
+.answer::before{
+  content: "";
+  position: absolute;
+  width: .6rem;
+  height: 90%;
+  background-color: #caeaeb;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }
 
-.contact__description{
-  margin-bottom: var(--mb-3);
+.answer p{
+  font-size: .8rem;
+  color: #020202;
+  padding: 2rem;
+}
+
+.accordion-item:target .answer{
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link  .bx-chevron-down{
+  display: none;
+}
+
+.accordion-item:target .accordion-link  .bx-chevron-up{
+  display: block;
+}*/
+
+.questions-container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.question{
+  border-radius: .4rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(3,74,40,.15);
+}
+.question button{
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border:none;
+  outline: none;
+  font-size: 1.4rem;
+  color: var(--green);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+}
+.question p{
+  font-size: 1rem;
+  color: var(--green);
+  max-height: 0;
+  opacity: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all 0.6s ease;
+  
+}
+.d-arrow{
+  transition: transform 0.5s ease-in ;
+  color: var(--green);
+}
+
+.question p.show{
+  max-height: 200px; 
+  opacity: 1;
+  padding:0px 15px 30px 15px;
+}
+.question button .d-arrow.rotate{
+  transform: rotate(180deg);
 }
 
 /*========== FOOTER ==========*/
@@ -482,18 +539,17 @@ header nav .logo{
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px){
   .home__container,
-  .about__container,
-  .app__container{
+  .about__container
+  {
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
-  .about__data, .about__initial,
-  .app__data, .app__initial,
-  .contact__container, .contact__initial{
+  .about__data, .about__initial
+  {
     text-align: initial;
   }
 
-  .about__img, .app__img{
+  .about__img{
     width: 380px;
     order: -1;
   }
@@ -535,7 +591,7 @@ header nav .logo{
     justify-items: center;
   }
 
-  .services__container,
+  .faqs__container,
   .features__container{
     margin-top: var(--mb-6);
   }
@@ -550,10 +606,6 @@ header nav .logo{
   .features__img{
     width: 130px;
   }
-
-  .app__store{
-    margin: 0 var(--mb-1) 0 0;
-  }
 }
 
 @media screen and (min-width: 960px){
@@ -566,8 +618,7 @@ header nav .logo{
     width: 500px;
   }
 
-  .about__container,
-  .app__container{
+  .about__container{
     column-gap: 7rem;
   }
 }
